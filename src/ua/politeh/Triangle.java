@@ -3,9 +3,10 @@ package ua.politeh;
 import lombok.Getter;
 
 
-public class Triangle {
+public class Triangle implements Figure {
 
     @Getter private double[] side;
+
 
     public Triangle(double side0, double side1, double side2) {
         side = new double[3];
