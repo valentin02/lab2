@@ -1,6 +1,10 @@
 package ua.politeh;
 
-public interface Figure {
+/**
+ * IFigure interface
+ * Used for interface implementing
+ */
+public interface IFigure {
     boolean isExists();
     double getArea();
     double getPerimeter();

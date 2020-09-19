@@ -6,4 +6,20 @@ public class RightTriangle extends Triangle {
         super(side0, side1, side2);
     }
 
+    @Override
+    public boolean isExists() {
+        boolean isRightTriangle = false;
+        double[] temp = this.getAngle();
+        if (super.isExists())
+        {
+            if (Math.abs(temp[0] - 90) < 10e-15 || Math.abs(temp[1] - 90) < 10e-15 || Math.abs(temp[2] - 90) < 10e-15)
+                isRightTriangle = true;
+        }
+        return isRightTriangle;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString().replace("triangle", "right triangle").replace("Triangle", "Right triangle");
+    }
 }
