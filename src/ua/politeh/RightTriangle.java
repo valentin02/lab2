@@ -10,8 +10,7 @@ public class RightTriangle extends Triangle {
     public boolean isExists() {
         boolean isRightTriangle = false;
         double[] temp = this.getAngle();
-        if (super.isExists())
-        {
+        if (super.isExists()) {
             if (Math.abs(temp[0] - 90) < 10e-15 || Math.abs(temp[1] - 90) < 10e-15 || Math.abs(temp[2] - 90) < 10e-15)
                 isRightTriangle = true;
         }

@@ -1,6 +1,6 @@
 package ua.politeh;
 
-public class RightTriangles extends Triangles{
+public class RightTriangles extends Triangles {
 
     RightTriangle[] triangles;
 
@@ -10,8 +10,7 @@ public class RightTriangles extends Triangles{
     }
 
 
-    public void addTriangle(double side1, double side2, double side3, int i)
-    {
+    public void addTriangle(double side1, double side2, double side3, int i) {
         triangles[i] = new RightTriangle(side1, side2, side3);
     }
 
@@ -20,13 +19,12 @@ public class RightTriangles extends Triangles{
         double temp = side[0];
         for (int i = 1; i < side.length; i++) {
             if (side[i] > temp)
-               temp = side[i];
+                temp = side[i];
         }
         return temp;
     }
 
-    public RightTriangle getTriangleWithMaxHypotenuse()
-    {
+    public RightTriangle getTriangleWithMaxHypotenuse() {
         int triangleWithMaxHypotenuseNumber = 0;
 
         if (triangles.length > 1) {
@@ -41,9 +39,8 @@ public class RightTriangles extends Triangles{
 
 
     @Override
-    public String printResult(){
-
-        return "\nTHE LONGEST HYPOTENUSES OF RIGHT TRIANGLES = " + (getTriangleWithMaxHypotenuse().isExists() ? getTriangleWithMaxHypotenuse() : "-1") ;
+    public String printResult() {
+        return "\nTHE LONGEST HYPOTENUSES OF RIGHT TRIANGLES = " + (getTriangleWithMaxHypotenuse().isExists() ? getTriangleWithMaxHypotenuse() : "-1");
     }
 
     @Override
